@@ -11,14 +11,21 @@ function change() {
 		span.style.fontSize = "20px";
 	}
 }
+function change1() {
+	var spanArra1 = document.getElementsByClassName("name1")
+	spanArra1[0].style.color= "red";
+	spanArra1[0].style.fontSize= "100px";
+	console.log(spanArra1.length)
+}
 </script>
 </head>
 <body>
-<h3>내가 좋아하는 과일
+<h3 >내가 좋아하는 과일
 	<button onclick="change()">누르세요</button>
 </h3>
+<h2><button onclick="change1()">눌러봐!!</button></h2>
 <hr>
-저는 빨간 <span>사과</span>를 좋아해서
+저는 빨간 <h6 class ="name1">사과</h6>를 좋아해서
 아침마다 한 개씩 먹고 있어요. 운동할 때는 중간 중간에
 <span>바나나</span>를 먹지요. 탄수화물 섭취가 빨라
 힘이 납니다. 또한 달콤한 향기를 품은 <span>체리</span>와
