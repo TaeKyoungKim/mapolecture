@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><title>윈도우의 위치와 크기 조절</title></head>
 <body>
-<h3>윈도우의 위치와 크기 조절</h3>
-<hr>
-<button onclick="window.moveBy(-10, 0)">left</button>
-<button onclick="window.moveBy(10, 0)">right</button>
-<button onclick="self.moveBy(0, -10)">up</button>
-<button onclick="moveBy(0, 10)">down</button>
-<button onclick="resizeBy(10, 10)">+</button>
-<button onclick="resizeBy(-10, -10)">-</button>
+
+<p>Open "myWindow" and move the new window 250px relative to its current position:</p>
+
+<button onclick="openWin()">Open "myWindow"</button>
+<button onclick="moveWin()">Move "myWindow"</button>
+
+<script>
+var myWindow;
+
+function openWin() {
+  myWindow = window.open('http://www.naver.com', 'child03', 'top=500px, left=500px, height=700px, width=700px,, location=0, menubar=0,  resizable=no, status=no, toolbar=no, scrollbas=no, fullscreen=no');
+
+  myWindow.document.write("<p>This is 'myWindow'</p>");
+}
+
+function moveWin() {
+  myWindow.moveBy(250, 250);
+  myWindow.focus();
+}
+</script>
+
 </body>
 </html>
